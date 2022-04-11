@@ -117,7 +117,7 @@ const Company: NextPage<CompanyProps> = ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: ['ig'].map((company) => {
+    paths: [].map((company) => {
       return {
         params: { company },
       };

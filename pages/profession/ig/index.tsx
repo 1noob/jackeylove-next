@@ -7,7 +7,7 @@ import Section from '@/components/Section';
 import EntryList from '@/components/EntryList';
 import WorkEntry from '@/components/WorkEntry';
 
-type TesProps = {
+type igProps = {
   title: string;
   description: string;
   meta: { [key: string]: string };
@@ -50,7 +50,7 @@ const tesTeammates: {
   },
 };
 
-const tescorp: NextPage<TesProps> = ({
+const igcorp: NextPage<igProps> = ({
   title,
   description,
   meta,
@@ -133,4 +133,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default tescorp;
+export default igcorp;
