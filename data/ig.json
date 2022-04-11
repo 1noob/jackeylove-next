@@ -1,0 +1,36 @@
+{
+  "title": "Invictus Gaming",
+  "description": "iG（Invictus Gaming）电子竞技俱乐部成立于2011年，旗下拥有英雄联盟分部、DOTA2分部、星际争霸Ⅱ分部等。",
+  "thumbnail": "/og/ig.png",
+  "meta": {
+    "Start Date": "Jun 2016",
+    "Position": "AD Carry"
+  },
+  "currently": "翻过那座山，他们就会听到你的故事。",
+  "timeline": [
+    {
+      "title": "2019全球总决赛四强",
+      "date": "Nov 16, 2019",
+      "link": "https://www.bilibili.com/video/BV1vQ4y1N7Zr",
+      "teammates": ["TheShy","Ning","Rookie","Baolan"]
+    },
+    {
+      "title": "2019LPL春季总决赛冠军",
+      "date": "Apr 21, 2019",
+      "link": "https://www.bilibili.com/video/BV1vQ4y1N7Zr",
+      "teammates": ["TheShy","Ning","Rookie","Baolan"]
+    },
+    {
+      "title": "2018德玛西亚杯冠军",
+      "date": "Dec 24, 2018",
+      "link": "https://www.bilibili.com/video/BV1vQ4y1N7Zr",
+      "teammates": ["TheShy","Ning","Rookie","Baolan"]
+    },
+    {
+      "title": "2018全球总决赛冠军",
+      "date": "Nov 3, 2018",
+      "link": "https://www.bilibili.com/video/BV1vQ4y1N7Zr",
+      "teammates": ["TheShy","Ning","Rookie","Baolan"]
+    }
+  ]
+}

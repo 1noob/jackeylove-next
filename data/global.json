@@ -1,12 +1,8 @@
 {
   "nav": [
     {
-      "path": "/work",
-      "label": "Work"
-    },
-    {
-      "path": "/posts",
-      "label": "Posts"
+      "path": "/profession",
+      "label": "Profession"
     },
     {
       "path": "/videos",
@@ -18,25 +14,17 @@
     }
   ],
   "status": {
-    "content": "Pleased to meet you.",
-    "emoji": "👋"
+    "content": "本台记着喻文波为您报道",
+    "emoji": "🙂"
   },
   "footer": [
     {
-      "label": "Github",
-      "href": "https://github.com/1noob"
+      "label": "WeiBo",
+      "href": "https://weibo.com/n/JackeyLoveasdzz"
     },
     {
-      "label": "Twitter",
-      "href": "https://twitter.com/zhousongjie"
-    },
-    {
-      "label": "Bilibili",
-      "href": "https://space.bilibili.com/5289092"
-    },
-    {
-      "label": "Email",
-      "href": "mailto:zhouzhou.plays@gmail.com"
+      "label": "TieBa",
+      "href": "https://tieba.baidu.com/f?kw=jackeylove"
     }
   ]
 }

@@ -47,27 +47,18 @@ const Home: NextPage<HomeProps> = ({ date, mdx }) => {
         <h2>About</h2>
         <div className="relative float-right w-1/3 ml-4 md:ml-8 mb-4 md:mb-8 inline-flex rounded-md overflow-hidden">
           <Image
-            src="/img/gdufe.jpeg"
-            width={400}
-            height={400}
+            src="/img/2018WorldChampion.jpeg"
+            width={800}
+            height={530}
             alt="graduate"
           />
         </div>
         <p>
-          周颂杰，2020届广东财经大学计算机科学与技术本科毕业生。
-          热衷于算法竞赛，在校期间加入校 ACM 协会，多次参加 CCPC、ICPC 比赛。
-          算法之外主要学习 Web 开发，擅长 Angular.js、Node.js、SpringBoot、Mysql 等。
-          使用的语言比较杂，算法竞赛的时候用的 C++，开发用的 Java，业余项目喜欢用 Python。
+          喻文波（游戏ID：JackeyLove），2000年11月18日出生于湖北省黄冈市，
+          英雄联盟职业选手，司职ADC，现效力于滔搏电子竞技俱乐部。
         </p>
         <p>
-          毕业后一直在考研中，比较倾向计算机视觉方向，参加过 Kaggle 平台的
-          <a href='https://www.kaggle.com/competitions/classify-leaves'>
-            Classify Leaves
-          </a>、
-          <a href='https://www.kaggle.com/competitions/cowboyoutfits'>
-            CowBoy Outfits Detection
-          </a>
-          等视觉竞赛。
+          2018年正式登上LPL英雄联盟职业联赛的舞台，并在2018英雄联盟全球总决赛上以3:0击败FNC战队夺得LPL赛区首个世界赛冠军。
         </p>
         <h2>Colophon</h2>
         <p>

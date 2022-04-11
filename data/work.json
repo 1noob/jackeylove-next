@@ -1,17 +1,49 @@
 {
-  "title": "Work",
-  "description": "",
-  "experience": [],
-  "projects": [
-
+  "title": "Profession",
+  "description": "在他赌上职业生涯的这局游戏中，你我将OB全程。",
+  "experience": [
+    {
+      "link": "/profession/tes",
+      "company": "TOP E-SPORT",
+      "title": "AD Carry",
+      "start": "Apr 2020",
+      "end": "Present"
+    },
+    {
+      "link": "/profession/ig",
+      "company": "Invictus Gaming",
+      "title": "AD Carry",
+      "start": "Jan 2018",
+      "end": "Nov 2019"
+    }
   ],
-  "interests": [
-    "CSS",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "SpringBoot",
-    "Angular"
+  "awards": [
+    "2016年Nest冠军",
+    "2017年Nest冠军",
+    "2018全球总决赛冠军",
+    "2018德玛西亚杯冠军",
+    "2018LPL年度最佳新秀",
+    "2019年LPL春季赛冠军",
+    "2020年MSC季中杯冠军",
+    "2020年LPL夏季赛冠军",
+    "2020LPL年度最佳ADC",
+    "2020年德玛西亚杯冠军",
+    "2021年德玛西亚杯冠军"
   ],
-  "recommendations": []
+  "recommendations": [
+    {
+      "text": "Nobody wants to be flashing forward to make the mistake in the Game five, but Jackey says I will flashing forward. I will be the hero.",
+      "name": "CaptainFlowers",
+      "title": "解说",
+      "company": "LEC",
+      "thumbnail": "/img/captainflowers.jpeg"
+    },
+    {
+      "text": "我对他最突出的印象是冷静，尽管有些时候他会有些奇怪的被击杀，但是他的操作和对线都很棒。另外就是他本身似乎眉宇之间透着一股和年龄不符的英气，身高不算高的他却给人一种器宇轩昂的感觉，我觉得他是一名很有魅力的选手。据我暗中观察，他在选手中似乎也挺有威望哟。",
+      "name": "MintyBlue藏马",
+      "title": "副总裁",
+      "company": "iG电子竞技俱乐部",
+      "thumbnail": "/img/mintyblue.jpeg"
+    }
+  ]
 }

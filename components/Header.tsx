@@ -11,7 +11,7 @@ const Header = () => {
         <div className="relative w-12">
           <Link href="/">
             <a className="flex items-start relative group">
-              <span className="sr-only">Alex Carpenter</span>
+              <span className="sr-only">JackeyLove</span>
               <Image
                 src="/img/me.jpeg"
                 alt=""
