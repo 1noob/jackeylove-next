@@ -6,15 +6,13 @@ const bilibiliStats = async (_: NextApiRequest, res: NextApiResponse) => {
     );
     const stats = await data.json();
 
-    const code = stats?.items[0]
-
     res.setHeader(
         'Cache-Control',
         'public, s-maxage=1200, stale-while-revalidate=600',
     );
     
     
-    return res.status(200).json(code);
+    return res.status(200).json(stats);
 };
 
 export default bilibiliStats;
