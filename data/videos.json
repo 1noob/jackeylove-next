@@ -1,5 +1,12 @@
 {
   "title": "Videos",
   "description": "在他赌上职业生涯的这局游戏中，你我将OB全程。",
-  "videos": []
+  "videos": [
+    {
+      "title": "2018全球总决赛官方纪录片《英雄，登峰造极境》",
+      "date": "2018-12-01",
+      "id": "BV16t411X75B",
+      "tags": ["lpl", "ig"]
+    }
+  ]
 }

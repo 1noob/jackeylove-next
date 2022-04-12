@@ -9,6 +9,7 @@ import Meta from '@/components/Meta';
 import Note from '@/components/Note';
 import Slideshow from '@/components/Slideshow';
 import Video from '@/components/Video';
+import BilibiliVideo from '@/components/BilibiliVideo'
 
 export const components = {
   Badge,
@@ -60,5 +61,5 @@ export const components = {
   Spacer: () => {
     return <span aria-hidden={true} className={cx('m-0 block h-6')} />;
   },
-  Video,
+  Video, BilibiliVideo,
 };

@@ -13,7 +13,6 @@ interface ContextProps extends ParsedUrlQuery {
 
 type Video = {
   title: string;
-  description: string;
   date: string;
   id: string;
   tags: Array<string>;
@@ -36,14 +35,13 @@ const VideosTagged = ({ tag, videos }: VideosTaggedProps) => {
             <Section key={year} heading={year}>
               <EntryList>
                 {yearVideos.map((video, index) => {
-                  const link = `https://youtube.com/watch?v=${video.id}`;
+                  const link = `/videos/${video.id}`;
                   return (
                     <Entry
                       key={index}
                       link={link}
                       date={video.date}
                       title={video.title}
-                      description={video.description}
                       tags={video.tags.map((tag) => {
                         return {
                           path: `/videos/tagged/${slugify(tag)}`,

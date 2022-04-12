@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
 import useSWR from 'swr';
 import type { GroupByYear } from '@/lib/utils';
-import { groupByYear, fetcher, slugify } from '@/lib/utils';
+import { groupByYear, fetcher, slugify , log_fetcher} from '@/lib/utils';
 import Card from '@/components/Card';
 import Entry from '@/components/Entry';
 import EntryList from '@/components/EntryList';
@@ -9,10 +9,11 @@ import Intro from '@/components/Intro';
 import Section from '@/components/Section';
 import ExternalLink from '@/components/ExternalLink';
 import MD5 from '@/lib/md5';
+import BilibiliVideo from '@/components/BilibiliVideo'
+
 
 type Video = {
   title: string;
-  description: string;
   date: string;
   id: string;
   tags: Array<string>;
@@ -20,20 +21,18 @@ type Video = {
 
 type VideoProps = {
   title: string;
-  description: string;
   videos: GroupByYear<Video>;
 };
 
-const Videos: NextPage<VideoProps> = ({ title, description, videos }) => {
+const Videos: NextPage<VideoProps> = ({ title, videos }) => {
   const { data } = useSWR('/api/youtube', fetcher);
   const subscriberCount = data?.subscriberCount;
   const viewCount = data?.viewCount;
 
-  console.log(useSWR('/api/bilibili', fetcher));
 
   return (
     <>
-      <Intro title={title} description={description} />
+      <Intro title={title} />
 
       <Section>
         <ul className="grid sm:grid-cols-2 gap-4">
@@ -73,14 +72,13 @@ const Videos: NextPage<VideoProps> = ({ title, description, videos }) => {
             <Section key={year} heading={year}>
               <EntryList>
                 {yearVideos.map((video, index) => {
-                  const link = `https://youtube.com/watch?v=${video.id}`;
+                  const link = `/videos/${video.id}`;
                   return (
                     <Entry
                       key={index}
                       link={link}
                       date={video.date}
                       title={video.title}
-                      description={video.description}
                       tags={video.tags.map((tag) => {
                         return {
                           path: `/videos/tagged/${slugify(tag)}`,
