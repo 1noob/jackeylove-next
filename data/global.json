@@ -19,12 +19,20 @@
   },
   "footer": [
     {
-      "label": "WeiBo",
+      "label": "Weibo",
       "href": "https://weibo.com/n/JackeyLoveasdzz"
     },
     {
-      "label": "TieBa",
+      "label": "Tieba",
       "href": "https://tieba.baidu.com/f?kw=jackeylove"
+    },
+    {
+      "label": "Douyu",
+      "href": "https://www.douyu.com/315449"
+    },
+    {
+      "label": "RankOB",
+      "href": "https://live.bilibili.com/1245359"
     }
   ]
 }

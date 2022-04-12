@@ -8,6 +8,7 @@ import EntryList from '@/components/EntryList';
 import Intro from '@/components/Intro';
 import Section from '@/components/Section';
 import ExternalLink from '@/components/ExternalLink';
+import MD5 from '@/lib/md5';
 
 type Video = {
   title: string;
@@ -27,6 +28,8 @@ const Videos: NextPage<VideoProps> = ({ title, description, videos }) => {
   const { data } = useSWR('/api/youtube', fetcher);
   const subscriberCount = data?.subscriberCount;
   const viewCount = data?.viewCount;
+
+  console.log(useSWR('/api/bilibili', fetcher));
 
   return (
     <>
@@ -55,10 +58,10 @@ const Videos: NextPage<VideoProps> = ({ title, description, videos }) => {
         </ul>
         <div className="mt-8 text-center">
           <ExternalLink
-            href="https://space.bilibili.com/5289092"
+            href="https://www.douyu.com/315449"
             hostname={false}
           >
-            Subscribe on Bilibili
+            Subscribe on Douyu
           </ExternalLink>
         </div>
       </Section>
