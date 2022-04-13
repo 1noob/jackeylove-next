@@ -63,7 +63,9 @@ const Home: NextPage<HomeProps> = ({ date, mdx }) => {
         <h2>Colophon</h2>
         <p>
           本站的技术栈有 Next.js，Tailwind CSS，Framer Motion，React
-          Aria，TypeScript，MDX，在 Vercel 上部署。字体风格为 JetBrains Mono。
+          Aria，TypeScript，MDX，字体风格为 JetBrains Mono。
+          代码保存在 Github 仓库，使用 Vercel 自动构建部署。
+          作者自标记为明牌型水鬼。
         </p>
       </Prose>
     </>

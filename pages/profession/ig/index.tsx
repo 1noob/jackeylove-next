@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { groupByYear } from '@/lib/utils';
 import Intro from '@/components/Intro';
 import Note from '@/components/Note';
@@ -6,6 +6,13 @@ import Meta from '@/components/Meta';
 import Section from '@/components/Section';
 import EntryList from '@/components/EntryList';
 import WorkEntry from '@/components/WorkEntry';
+import Image from 'next/image';
+import { cx } from '@/lib/utils';
+import {ParsedUrlQuery} from "querystring";
+
+interface ContextProps extends ParsedUrlQuery {
+  company: string;
+}
 
 type igProps = {
   title: string;
@@ -18,6 +25,13 @@ type igProps = {
     description?: string;
     link?: string;
     teammates?: Array<keyof typeof tesTeammates>;
+  }>;
+  recommendations: Array<{
+    text: string;
+    name: string;
+    title: string;
+    company: string;
+    thumbnail: string;
   }>;
 };
 
@@ -56,6 +70,7 @@ const igcorp: NextPage<igProps> = ({
   meta,
   currently,
   timeline,
+  recommendations
 }) => {
   const groupedTimeline = groupByYear(timeline);
   return (
@@ -120,17 +135,58 @@ const igcorp: NextPage<igProps> = ({
             </Section>
           );
         })}
+
+      <Section heading="Recommendations">
+        <EntryList>
+          {recommendations.map((item, index) => {
+            return (
+                <div key={index} className="flex flex-col sm:flex-row">
+                  <div className="w-28 flex-shrink-0">
+                    <div className="mb-4">
+                      <Image
+                          src={item.thumbnail}
+                          alt={`${item.name} portrait`}
+                          width={48}
+                          height={48}
+                          className="rounded-md w-full block"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <p style={{ textIndent: '-.65rem' }}>“{item.text}”</p>
+                    <p
+                        className={cx(
+                            'mt-4',
+                            'text-gray-600',
+                            'dark:text-gray-300',
+                        )}
+                    >
+                      &mdash; {item.name}, {item.title}
+                    </p>
+                  </div>
+                </div>
+            );
+          })}
+        </EntryList>
+      </Section>
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
   const pageData = await import('@/data/ig.json');
+  const workData = await import('@/data/work.json');
   return {
     props: {
       ...pageData,
+      recommendations: workData.recommendations.filter(
+          (r: any) => r.company.toLowerCase() === "iG".toLowerCase(),
+      ),
     },
   };
 };
+
+
+
 
 export default igcorp;

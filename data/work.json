@@ -13,7 +13,7 @@
       "link": "/profession/ig",
       "company": "Invictus Gaming",
       "title": "AD Carry",
-      "start": "Jan 2018",
+      "start": "Jun 2016",
       "end": "Nov 2019"
     }
   ],
@@ -42,8 +42,22 @@
       "text": "我对他最突出的印象是冷静，尽管有些时候他会有些奇怪的被击杀，但是他的操作和对线都很棒。另外就是他本身似乎眉宇之间透着一股和年龄不符的英气，身高不算高的他却给人一种器宇轩昂的感觉，我觉得他是一名很有魅力的选手。据我暗中观察，他在选手中似乎也挺有威望哟。",
       "name": "MintyBlue藏马",
       "title": "副总裁",
-      "company": "iG电子竞技俱乐部",
+      "company": "IG",
       "thumbnail": "/img/mintyblue.jpeg"
+    },
+    {
+      "text": "我个人觉得我自己的风格这个赛季会变得很多，因为我们来了个新选手 JackeyLove。他是一个打法很凶的 ADC，我就没必要一直在对线的情况下打出优势了，我也可以慢慢发育，我也觉得自己的打团能力也不是很差的，所以打到后期也有 JackeyLove，就觉得线上不要很急，就慢慢打。",
+      "name": "Rookie",
+      "title": "Mid",
+      "company": "IG",
+      "thumbnail": "/img/rookie.png"
+    },
+    {
+      "text": "阿水在我们这是绝对核心\uD83D\uDE42",
+      "name": "WarHorse",
+      "title": "教练",
+      "company": "TES",
+      "thumbnail": "/img/warhorse.jpeg"
     }
   ]
 }
