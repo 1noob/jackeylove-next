@@ -21,10 +21,11 @@ type Video = {
 
 type VideoProps = {
   title: string;
+  description: string;
   videos: GroupByYear<Video>;
 };
 
-const Videos: NextPage<VideoProps> = ({ title, videos }) => {
+const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
   const { data } = useSWR('/api/youtube', fetcher);
   const subscriberCount = data?.subscriberCount;
   const viewCount = data?.viewCount;
@@ -32,7 +33,7 @@ const Videos: NextPage<VideoProps> = ({ title, videos }) => {
 
   return (
     <>
-      <Intro title={title} />
+      <Intro title={title} description={description}/>
 
       <Section>
         <ul className="grid sm:grid-cols-2 gap-4">
