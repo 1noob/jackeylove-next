@@ -63,16 +63,11 @@ export const formatDate = (
     },
   };
   let options = formats[format];
-  options.timeZone = 'Asia/Shanghai';
+  options.timeZone = 'UTC';
   return new Date(date).toLocaleDateString('en-us', options);
 };
 
 export const fetcher = (url: string) => fetch(url).then((res) => 
     res.json(),
 );
-
-export const log_fetcher = (url: string) => fetch(url).then((res) =>
-    console.log(JSON.stringify(res)),
-);
-
 
