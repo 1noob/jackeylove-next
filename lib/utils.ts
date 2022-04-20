@@ -63,7 +63,7 @@ export const formatDate = (
     },
   };
   let options = formats[format];
-  options.timeZone = 'UTC';
+  options.timeZone = 'Asia/Shanghai';
   return new Date(date).toLocaleDateString('en-us', options);
 };
 
