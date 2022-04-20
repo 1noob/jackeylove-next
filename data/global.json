@@ -1,8 +1,8 @@
 {
   "nav": [
     {
-      "path": "/profession",
-      "label": "Profession"
+      "path": "/career",
+      "label": "Career"
     },
     {
       "path": "/videos",
@@ -23,7 +23,7 @@
       "href": "https://weibo.com/n/JackeyLoveasdzz"
     },
     {
-      "label": "Tieba",
+      "label": "tieba",
       "href": "https://tieba.baidu.com/f?kw=jackeylove"
     },
     {

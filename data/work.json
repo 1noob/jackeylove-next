@@ -1,16 +1,16 @@
 {
-  "title": "Profession",
+  "title": "Career",
   "description": "在他赌上职业生涯的这局游戏中，你我将OB全程。",
   "experience": [
     {
-      "link": "/profession/tes",
+      "link": "/career/tes",
       "company": "TOP E-SPORTS",
       "title": "AD Carry",
       "start": "Apr 2020",
       "end": "Present"
     },
     {
-      "link": "/profession/ig",
+      "link": "/career/ig",
       "company": "Invictus Gaming",
       "title": "AD Carry",
       "start": "Jun 2016",
