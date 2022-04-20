@@ -26,9 +26,11 @@ type VideoProps = {
 };
 
 const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
-  const { data } = useSWR('/api/youtube', fetcher);
-  const subscriberCount = data?.subscriberCount;
-  const viewCount = data?.viewCount;
+  const { data } = useSWR('/api/bilibili', fetcher);
+
+  // 这玩意是异步的，不能实时 console.log
+  const follower = data?.follower;
+  const viewCount = data?.view;
 
 
   return (
@@ -40,7 +42,7 @@ const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
           <li className="flex flex-col">
             <Card eyebrow="Total subscribers" variant="gray">
               <p className="mt-2 text-4xl">
-                {subscriberCount ? subscriberCount : '-'}
+                {follower ? follower : '-'}
               </p>
             </Card>
           </li>
@@ -58,10 +60,10 @@ const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
         </ul>
         <div className="mt-8 text-center">
           <ExternalLink
-            href="https://www.douyu.com/315449"
+            href="https://space.bilibili.com/40201070/"
             hostname={false}
           >
-            Subscribe on Douyu
+            Subscribe on Bilibili
           </ExternalLink>
         </div>
       </Section>
