@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
 import useSWR from 'swr';
 import type { GroupByYear } from '@/lib/utils';
-import { groupByYear, fetcher, slugify , log_fetcher} from '@/lib/utils';
+import { groupByYear, fetcher, slugify } from '@/lib/utils';
 import Card from '@/components/Card';
 import Entry from '@/components/Entry';
 import EntryList from '@/components/EntryList';
