@@ -46,6 +46,17 @@ const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
       <Intro title={title} description={description}/>
 
       <Section heading="Channel">
+        <div className="relative aspect-video">
+          <iframe
+              className="w-full h-full absolute inset-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="Bilibili video player"
+              src={`//player.bilibili.com/player.html?bvid=${c_top_arc_bv}&page=1`}
+              scrolling="no"
+              frameBorder="no"
+              allowFullScreen
+          ></iframe>
+        </div><br/>
         <ul className="grid sm:grid-cols-2 gap-4">
           <li className="flex flex-col">
             <Card eyebrow="subscribers" variant="gray">
@@ -77,21 +88,20 @@ const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
             </ExternalLink>
           </li>
         </ul>
-        <br/>
+      </Section>
+
+      <Section heading="V5_Rookie">
         <div className="relative aspect-video">
           <iframe
               className="w-full h-full absolute inset-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               title="Bilibili video player"
-              src={`//player.bilibili.com/player.html?bvid=${c_top_arc_bv}&page=1`}
+              src={`//player.bilibili.com/player.html?bvid=${u_top_arc_bv}&page=1`}
               scrolling="no"
               frameBorder="no"
               allowFullScreen
           ></iframe>
-        </div>
-      </Section>
-
-      <Section heading="V5_Rookie">
+        </div><br/>
         <ul className="grid sm:grid-cols-2 gap-4">
           <li className="flex flex-col">
             <Card eyebrow="subscribers" variant="gray">
@@ -127,18 +137,6 @@ const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
             </ExternalLink>
           </li>
         </ul>
-        <br/>
-        <div className="relative aspect-video">
-          <iframe
-              className="w-full h-full absolute inset-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              title="Bilibili video player"
-              src={`//player.bilibili.com/player.html?bvid=${u_top_arc_bv}&page=1`}
-              scrolling="no"
-              frameBorder="no"
-              allowFullScreen
-          ></iframe>
-        </div>
       </Section>
 
       {Object.entries(videos)
