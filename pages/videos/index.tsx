@@ -29,42 +29,115 @@ const Videos: NextPage<VideoProps> = ({ title, videos, description }) => {
   const { data } = useSWR('/api/bilibili', fetcher);
 
   // 这玩意是异步的，不能实时 console.log
-  const follower = data?.follower;
-  const viewCount = data?.view;
+  const u_follower = data?.up_follower;
+  const u_view = data?.up_view;
+  const u_archive = data?.up_archive_count;
+  const u_top_arc_bv = data?.up_top_arc_bv;
+
+  const c_follower = data?.subscribed_count;
+  const c_archive = data?.archive_count;
+  const c_view = data?.view_count;
+  const c_top_arc_bv = data?.channel_top_arc_bv;
+
 
 
   return (
     <>
       <Intro title={title} description={description}/>
 
-      <Section>
+      <Section heading="Channel">
         <ul className="grid sm:grid-cols-2 gap-4">
           <li className="flex flex-col">
-            <Card eyebrow="Total subscribers" variant="gray">
+            <Card eyebrow="subscribers" variant="gray">
               <p className="mt-2 text-4xl">
-                {follower ? follower : '-'}
+                {c_follower ? c_follower : '-'}
               </p>
             </Card>
           </li>
           <li className="flex flex-col">
-            <Card eyebrow="Total views" variant="gray">
+            <Card eyebrow="archives" variant="gray">
               <p className="mt-2 text-4xl">
-                {viewCount
-                  ? new Intl.NumberFormat('en', { notation: 'compact' }).format(
-                      viewCount,
+                {c_archive ? c_archive : '-'}
+              </p>
+            </Card>
+          </li>
+          <li className="flex flex-col">
+            <Card eyebrow="views" variant="gray">
+              <p className="mt-2 text-4xl">
+                {c_view ? c_view : '-'}
+              </p>
+            </Card>
+          </li>
+          <li className="grid place-items-center p-4">
+            <ExternalLink
+                href="https://www.bilibili.com/v/channel/1132582"
+                hostname={false}
+            >
+              Subscribe on Bilibili
+            </ExternalLink>
+          </li>
+        </ul>
+        <br/>
+        <div className="relative aspect-video">
+          <iframe
+              className="w-full h-full absolute inset-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="Bilibili video player"
+              src={`//player.bilibili.com/player.html?bvid=${c_top_arc_bv}&page=1`}
+              scrolling="no"
+              frameBorder="no"
+              allowFullScreen
+          ></iframe>
+        </div>
+      </Section>
+
+      <Section heading="V5_Rookie">
+        <ul className="grid sm:grid-cols-2 gap-4">
+          <li className="flex flex-col">
+            <Card eyebrow="subscribers" variant="gray">
+              <p className="mt-2 text-4xl">
+                {u_follower ? u_follower : '-'}
+              </p>
+            </Card>
+          </li>
+          <li className="flex flex-col">
+            <Card eyebrow="archives" variant="gray">
+              <p className="mt-2 text-4xl">
+                {u_archive ? u_archive : '-'}
+              </p>
+            </Card>
+          </li>
+          <li className="flex flex-col">
+            <Card eyebrow="views" variant="gray">
+              <p className="mt-2 text-4xl">
+                {u_view
+                  ? new Intl.NumberFormat('cn', { notation: 'compact' }).format(
+                      u_view,
                     )
                   : '-'}
               </p>
             </Card>
           </li>
+          <li className="grid place-items-center p-4">
+            <ExternalLink
+                href="https://space.bilibili.com/1017081142"
+                hostname={false}
+            >
+              Subscribe on Bilibili
+            </ExternalLink>
+          </li>
         </ul>
-        <div className="mt-8 text-center">
-          <ExternalLink
-            href="https://space.bilibili.com/40201070/"
-            hostname={false}
-          >
-            Subscribe on Bilibili
-          </ExternalLink>
+        <br/>
+        <div className="relative aspect-video">
+          <iframe
+              className="w-full h-full absolute inset-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="Bilibili video player"
+              src={`//player.bilibili.com/player.html?bvid=${u_top_arc_bv}&page=1`}
+              scrolling="no"
+              frameBorder="no"
+              allowFullScreen
+          ></iframe>
         </div>
       </Section>
 
