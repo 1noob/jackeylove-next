@@ -19,20 +19,20 @@
   },
   "footer": [
     {
-      "label": "Weibo",
+      "label": "新浪微博",
       "href": "https://weibo.com/n/JackeyLoveasdzz"
     },
     {
-      "label": "tieba",
+      "label": "百度贴吧",
       "href": "https://tieba.baidu.com/f?kw=jackeylove"
     },
     {
-      "label": "Douyu",
+      "label": "斗鱼直播",
       "href": "https://www.douyu.com/315449"
     },
     {
-      "label": "RankOB",
-      "href": "https://live.bilibili.com/1245359"
+      "label": "联系站长",
+      "href": "mailto:448475691@qq.com"
     }
   ]
 }

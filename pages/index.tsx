@@ -6,10 +6,13 @@ import { getLatestUpdate } from '@/lib/feed';
 import { MDXRemote } from 'next-mdx-remote';
 import { components } from '@/components/MDXComponents';
 import Prose from '@/components/Prose';
+import Button from '@/components/Button';
+import React from 'react';
 
 type HomeProps = any;
 
 const Home: NextPage<HomeProps> = ({ date, mdx }) => {
+  const [showMore, setshowMore] = React.useState(false);
   return (
     <>
       <article
@@ -55,18 +58,29 @@ const Home: NextPage<HomeProps> = ({ date, mdx }) => {
         </div>
         <p>
           喻文波（游戏ID：JackeyLove），2000年11月18日出生于湖北省黄冈市，
-          英雄联盟职业选手，司职ADC，现效力于滔搏电子竞技俱乐部。
+          英雄联盟LPL职业选手，司职ADC，现效力于滔搏电子竞技俱乐部。
         </p>
         <p>
-          2018年正式登上LPL英雄联盟职业联赛的舞台，并在2018英雄联盟全球总决赛上以3:0击败FNC战队夺得LPL赛区首个世界赛冠军。
+          年仅15岁的 JackeyLove 于2016年加入IG战队，2018年正式登上LPL英雄联盟职业联赛的舞台，并在2018英雄联盟全球总决赛上以3:0击败FNC战队夺得LPL赛区首个世界总决赛冠军。
         </p>
-        <h2>Colophon</h2>
-        <p>
-          本站的技术栈有 Next.js，Tailwind CSS，Framer Motion，React
-          Aria，TypeScript，MDX，字体风格为 JetBrains Mono。
-          代码保存在 Github 仓库，使用 Vercel 自动构建部署。
-          —— 自娱自乐型水鬼
-        </p>
+        {!showMore && (
+            <Button onClick={() => setshowMore(true)} size="sm">
+              ...
+            </Button>
+        )}
+        {showMore && (
+            <div>
+              <p>
+                本站基于 Next.js，Tailwind CSS，Framer Motion，React
+                Aria，TypeScript，MDX，字体风格为 JetBrains Mono。
+                源码保存在{' '}
+                <a href="https://github.com/1noob/jackeylove-next">
+                  Github
+                </a>{' '}
+                仓库，使用 Vercel 自动构建部署。
+              </p>
+            </div>
+        )}
       </Prose>
     </>
   );
