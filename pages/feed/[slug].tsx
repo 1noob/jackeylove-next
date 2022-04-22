@@ -29,8 +29,8 @@ const FeedPage: React.FC<FeedPageProps> = ({ frontMatter, mdx }) => {
           {formatDate(frontMatter.date, 'full')}
         </time>{' '}
         <span role="separator" aria-orientation="vertical">
-          &#183;
-        </span>{' '}
+          {/*&#183;*/}
+        </span>
       </p>
     </>
   );

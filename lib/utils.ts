@@ -64,6 +64,7 @@ export const formatDate = (
   };
   let options = formats[format];
   options.timeZone = 'UTC';
+  options.hour12 = false;
   return new Date(date).toLocaleDateString('en-us', options);
 };
 
