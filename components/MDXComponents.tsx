@@ -10,60 +10,64 @@ import Note from '@/components/Note';
 import Slideshow from '@/components/Slideshow';
 import Video from '@/components/Video';
 import BilibiliVideo from '@/components/BilibiliVideo'
-import edgImage from '../public/img/edg-m.jpg'
+import edgImage from '../public/img/edg.jpg'
+import igImage from '../public/img/ig.jpg'
 
 export const components = {
-  Badge,
-  Card,
-  CodeSandbox: ({ src, title }: { src: string; title: string }) => (
+    Badge,
+    Card,
+    CodeSandbox: ({ src, title }: { src: string; title: string }) => (
     <iframe
-      title={title}
-      src={src}
-      className="my-12"
-      style={{
+        title={title}
+        src={src}
+        className="my-12"
+        style={{
         width: '100%',
         height: 500,
         border: 0,
         borderRadius: 4,
         overflow: 'hidden',
-      }}
-      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-    ></iframe>
-  ),
-  ExternalLink,
-  Image,
-  Highlights,
-  Note,
-  PersonMeta: ({
-    avatar,
-    meta,
-  }: {
+        }}
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        ></iframe>
+    ),
+    ExternalLink,
+    Image,
+    Highlights,
+    Note,
+    PersonMeta: ({
+        avatar,
+        meta,
+    }: {
     meta: Array<{
-      title: string;
-      description: string;
+        title: string;
+        description: string;
     }>;
     avatar: {
-      src: string;
-      alt: string;
+        src: string;
+        alt: string;
     };
-  }) => {
-    return (
-      <div className="relative clear-both">
-        <div className="relative float-right w-1/3 ml-4 md:ml-8 mb-4 md:mb-8 inline-flex rounded-md overflow-hidden">
-          <Image src={avatar.src} width={400} height={400} alt={avatar.alt} />
-        </div>
-        <Meta items={meta} />
-      </div>
-    );
-  },
-  pre: Code,
-  Slideshow,
-  Spacer: () => {
-    return <span aria-hidden={true} className={cx('m-0 block h-6')} />;
-  },
-  Video, BilibiliVideo,
-  EdgImage: () => {
-   return <Image src={edgImage} placeholder='blur' />
-  }
+    }) => {
+        return (
+            <div className="relative clear-both">
+            <div className="relative float-right w-1/3 ml-4 md:ml-8 mb-4 md:mb-8 inline-flex rounded-md overflow-hidden">
+              <Image src={avatar.src} width={400} height={400} alt={avatar.alt} />
+            </div>
+            <Meta items={meta} />
+            </div>
+        );
+    },
+    pre: Code,
+    Slideshow,
+    Spacer: () => {
+        return <span aria-hidden={true} className={cx('m-0 block h-6')} />;
+    },
+    Video, BilibiliVideo,
+    EdgImage: () => {
+        return <Image src={edgImage} placeholder='blur' />
+    },
+    IgImage: () => {
+        return <Image src={igImage} placeholder='blur' />
+    }
 };
