@@ -10,6 +10,7 @@ import Note from '@/components/Note';
 import Slideshow from '@/components/Slideshow';
 import Video from '@/components/Video';
 import BilibiliVideo from '@/components/BilibiliVideo'
+import edgImage from '../public/img/edg-m.jpg'
 
 export const components = {
   Badge,
@@ -62,4 +63,7 @@ export const components = {
     return <span aria-hidden={true} className={cx('m-0 block h-6')} />;
   },
   Video, BilibiliVideo,
+  EdgImage: () => {
+   return <Image src={edgImage} placeholder='blur' />
+  }
 };
