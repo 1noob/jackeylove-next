@@ -1,4 +1,4 @@
-# alexcarpenter-next
+# JackeyLove-next(Cover)
 
 > Personal website built with Next.js, TypeScript, next-mdx-remote, and Tailwind CSS.
 
